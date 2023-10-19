@@ -60,7 +60,7 @@ body {
 .navbar hr {
 	min-width: 100px;
 	border: 0;
-	border-bottom: 2px solid black;
+	border-bottom: 2px dotted black;
 }
 
 h1 {
@@ -108,7 +108,7 @@ h1 {
 }
 
 .scatterContainer img {
-  width: 13vw;
+  width: 15vw;
   height: auto;
   display: block;
   moz-border-radius: 80px / 40px;
@@ -125,7 +125,7 @@ h1 {
   background-color: #ffffff;
   opacity: 60%;
   overflow: hidden;
-  width: 13vw;
+  width: 15vw;
   height: 0;
   transition: 0.3s ease;
   moz-border-radius: 80px / 40px;
@@ -162,7 +162,7 @@ h1 {
 
 #nellyContainer {
     left: 55%;
-    top: 40%;
+    top: 60%;
     transform: rotate(-2deg);
 }
 
@@ -239,13 +239,16 @@ h1 {
 	color: #000;
 	opacity: 0;
 	transition: 1s opacity;
-	transform: translate(6.2em, 4em);
+	transform: translate(6.2em, 2em);
+	text-shadow: 0px 0px 3px white;
+	padding: 3em;
 	font-family: Montserrat;
 	width: 8rem;
 }
 
 .lid:hover p {
 	opacity: 1;
+
 }
 
 .bottle {
@@ -268,8 +271,8 @@ h2 {
 	margin-top: 1em;
 	padding-left: 2em;
 	padding-right: 2em;
-	border-top: 2px solid dimgray;
-	border-bottom: 2px solid dimgray;
+	border-top: 2px dotted dimgray;
+	border-bottom: 2px dotted dimgray;
 
 }
 
@@ -286,8 +289,10 @@ blockquote {
 .feedContainer {
 	display: flex;
 	flex-direction: row;
+/*	width: 80vw;*/
 	justify-content: space-evenly;
 	margin-top: 2em;
+	margin-left: 6em;
 }
 
 .collage {
@@ -304,7 +309,7 @@ blockquote {
   	position: relative;
 /*  	border: 3px solid black;*/
   	top: 10%;
-  	left: -20%;
+  	left: -25%;
   	text-decoration: none;
   	display: inline-block;
  }
@@ -322,7 +327,7 @@ blockquote {
 }
 
 .navbottle:hover {
-	transform: translate(-10%, -10%) rotate(-10deg) scale(0.96);
+	transform: translate(-30%, -30%) rotate(-10deg) scale(0.96);
 }
 
 
@@ -351,7 +356,7 @@ blockquote {
 	font-family: Comfortaa;
   	text-align: center;
   	position: absolute;
- 	color: #44d400;
+ 	color: #67befe;
  	text-shadow: 1px 1px 1px white;
  	display: inline-block;
 /* 	border: 2px solid black;*/
@@ -361,10 +366,71 @@ blockquote {
 }
 
 
+.postbottle-link {
+  	z-index: 99;
+  	position: relative;
+  	top: -20%;
+  	left: 75%;
+  	text-decoration: none;
+  	display: inline-block;
+ }
+
+.postbottle {
+    display: flex;
+    width: auto;
+    transform: translate(-30%, -30%) rotate(-5deg);
+  	align-items: center;
+  	flex-direction: column;
+  	justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+/*    overflow: hidden;*/
+}
+
+.postbottle:hover {
+	transform: translate(-30%, -30%) rotate(10deg) scale(0.96);
+}
+
+
+.postlid {
+    width: 6em;
+    height: 7em;
+    background-color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+/*    border: 2px solid dimgray;*/
+}
+
+
+.post_bottle {
+	background-color: #67befe;
+  	width: 8em;
+    height: 10em;
+  	padding: 10px;
+  	border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+ }
+
+.postbottle-text {
+	font-family: Comfortaa;
+  	text-align: center;
+  	position: absolute;
+ 	color: #f9aeae;
+ 	text-shadow: 1px 1px 1px white;
+ 	display: inline-block;
+ 	margin-top: 2em;
+ 	font-size: 2em; 	
+}
+
 
 #bio {
 	background: rgb(255,234,193);
 	background: linear-gradient(0deg, rgba(255,234,193,1) 0%, rgba(247,242,232,1) 100%);
+	background-image: url(hands_overlay.png);
+	background-position: right;
+	background-size: contain;
+	background-repeat: no-repeat;
 	padding: 5rem;
 	display: block;
 	justify-content: center;
@@ -398,4 +464,10 @@ blockquote {
 #bio:hover a {
 	text-shadow: 0px 0px 3px orange;
   	transition: 0.2s;
+}
+
+#posts {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 10rem;
 }
